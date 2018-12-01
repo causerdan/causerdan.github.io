@@ -1,0 +1,229 @@
+<!doctype html>
+<html class="no-js" lang="EN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>North Pole</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet"> 
+        <!-- <link rel="stylesheet" href="css/fontawesome/all.min.css"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+</div>
+        <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Welcome to My Game</h4>
+              <p class="text-muted">This is an experiment in creating a game.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <i class="fas fa-tree"></i>&nbsp;<strong>North Pole</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <main role="main">
+        <div class="container-fluid">
+            
+            <div class="row mt-5">
+                <div class="col-md-9">
+                    <!-- <h1>Santa's Workshop</h1> --> 
+                    <button class="btn btn-danger btn-lg" id="makeToy"><img class="svgIcon" src="img/noun_Toy_403654.svg" alt="" style="width: 60px;"> Build Toy</button>
+                    <button class="btn btn-danger btn-lg disabled" id="btn-deliverGifts"> Deliver Gifts</button>
+                </div>
+                <div class="col-md-3 mt-2">
+                    <button class="btn btn-danger float-right" id="resetGame">Reset Game</button>
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-6">
+            <div class="card  mt-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <h2>Santa's Workshop</h2>
+                                </div>
+                                <div class="col-md-5">
+                                    <p class="lead"><b>Total Toy:</b> <span class="clickTotal">0</span></p>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    
+                                </div>
+                                <div class="col-md-12">
+                                    <hr>
+                                    <h3>Upgrades</h3>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4><i class="fas fa-warehouse"></i> Workshop </h4>
+                                            <p><b>Level <span id="num-workshopLvl">0</span></b> (Next Upgrade at <span id="cost-workshopLvl">0</span> CM) <button class="btn btn-success btn-upgrade disabled" id="btn-workshopLvl"><i class="fas fa-arrow-alt-circle-up"></i></button></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h4><i class="fas fa-hammer"></i> Tools</h4>
+                                            <p><b>Level <span id="num-toolLvl">0</span></b> (Next Upgrade at <span id="cost-toolLvl">0</span> CM) <button class="btn btn-success btn-upgrade disabled" id="btn-toolLvl"><i class="fas fa-arrow-alt-circle-up"></i></button></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h4><img src="img/noun_Elf_1144178.svg" alt="" style="width: 60px;"> Elfs</h4>
+                                             <p><b>Level <span id="num-elfLevel">0</span></b> (Next Upgrade at <span id="cost-elfLevel">0</span> CM) <button class="btn btn-success btn-upgrade disabled" id="btn-elfLevel"><i class="fas fa-arrow-alt-circle-up"></i></button></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="card mt-1">
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Santa's Garage</h2>        
+                            </div>
+                        </div>
+                        
+                        
+                        <p>Christmas Delivery Quota (<span id="stock">0</span> / <span id="quota">25</span>)</p>
+                        <div class="months">
+                            <div class="month">J</div>
+                            <div class="month">F</div>
+                            <div class="month">M</div>
+                            <div class="month">A</div>
+                            <div class="month">M</div>
+                            <div class="month">J</div>
+                            <div class="month">J</div>
+                            <div class="month">A</div>
+                            <div class="month">S</div>
+                            <div class="month">O</div>
+                            <div class="month">N</div>
+                            <div class="month">D</div>
+                        </div>
+                        <div class="progress mb-2">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+
+                        
+                    </div>
+                     <div class="col-md-12">
+                        <hr>
+                        <h3>Upgrades</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4><img src="img/noun_Sled_1427302.svg" alt="" style="width: 60px;"> Sleigh</h4>
+                                <p><b>Level <span id="num-sleighLvl">0</span></b> (Next Upgrade at <span id="cost-sleighLvl">0</span> CM) <button class="btn btn-success btn-upgrade disabled" id="btn-sleighLvl"><i class="fas fa-arrow-alt-circle-up"></i></button></p>
+                            </div>
+                            <div class="col-md-12">
+                                <h4><img src="img/noun_Gifts bag_746496.svg" alt="" style="width: 60px;"> Sack</h4>
+                                <p><b>Level <span id="num-bagLvl">0</span></b> (Next Upgrade at <span id="cost-bagLvl">0</span> CM) <button class="btn btn-success btn-upgrade disabled" id="btn-bagLvl"><i class="fas fa-arrow-alt-circle-up"></i></button></p>
+                            </div>
+                            <div class="col-md-12">
+                                <h4><img src="img/noun_reindeer_1516359.svg" alt="" style="width: 60px;">  Reindeer</h4>
+                                <p><b>Level <span id="num-deerLvl">0</span></b> (Next Upgrade at <span id="cost-deerLvl">0</span> CM) <button class="btn btn-success btn-upgrade disabled" id="btn-deerLvl"><i class="fas fa-arrow-alt-circle-up"></i></button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="card col-md-12 mt-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h2>Christmas Magic (CM): <span id="magic">0</span></h2>
+                            <h2><i class="fas fa-lg fa-globe-americas"></i> World Delivery Coverage: <span id="deliveryRate">0</span>%</h2>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            </div>
+           
+        
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+        
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+       
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    </body>
+</html>
